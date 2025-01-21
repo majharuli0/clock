@@ -1,0 +1,106 @@
+    html {
+      background: #1a53ff;
+      background-size: cover;
+      font-family: 'helvetica neue';
+      text-align: center;
+      font-size: 10px;
+    }
+
+    body {
+      margin: 0;
+      font-size: 2rem;
+      display: flex;
+      flex: 1;
+      min-height: 100vh;
+      align-items: center;
+    }
+
+    .clock {
+      width: 30rem;
+      height: 30rem;
+      border-radius: 50%;
+      margin: 5rem auto;
+      position: relative;
+      padding: 2rem;
+      border: .5rem solid white;
+      box-shadow:1rem 1rem 1rem  #184ce6 ;
+        background-color: #184ce6;
+    }
+    .clock-face {
+      position: relative;
+      width: 90%;
+      height: 90%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+    }
+
+    .hand {
+      width: 50%;
+      height: 0.6rem;
+      background: black;
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: rotate(90deg);
+      transform-origin: 100%;
+      transition: all 0.05s;
+      transition-timing-function: cubic-bezier(0.1,2.7,0.58,1);
+      border-radius: 50%;
+
+
+    }
+    .middleCircle{
+      width: 2rem;
+      height: 2rem;
+      border-radius: 5rem;
+      background: rgb(255, 255, 255);
+      position: absolute;
+      top: 47%;
+      right: 47%;
+      z-index: 100;
+    }
+    .digitalTime{
+      position: absolute;
+      bottom: 0%;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap:.8rem;
+      color: white;
+
+    }
+    #second{
+      position: absolute;
+       top: 50%;
+       left: 50%;
+       line-height: 0;
+       transform: translateX(-50%);
+       margin: 0;
+       padding: 0;
+       font-size: 15rem;
+       color: rgba(255, 255, 255, 0.259);
+    }
+    .hour-hand{
+      width: 30%;
+      background-color: white;
+      
+    }
+    .min-hand{
+      width: 40%;
+      background-color: rgba(255, 255, 255, 0.495);
+
+      
+    }
+    .second-hand{
+      background-color: rgba(255, 255, 255, 0.247);
+
+    }
+    @media screen  and (max-width:356px) {
+      html{
+        font-size: 9px;
+      }
+    }
+   
+    }
